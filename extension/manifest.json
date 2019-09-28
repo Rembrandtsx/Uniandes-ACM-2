@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "EnSeñas",
-    "description": "Herramienta para facilitar el acceso a las personas con discapacidad auditiva que sepan lenguaje de señas a cursos online.",
+    "description": "Herramienta para facilitar el acceso a las personas con discapacidad auditiva que sepan lenguaje de señas a significados de palabras de los sitios web donde se encuentren.",
     "version": "1.0",
     "icons": [
         {
