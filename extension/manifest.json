@@ -1,30 +1,27 @@
 {
-    "manifest_version": 2,
     "name": "EnSeñas",
-    "description": "Herramienta para facilitar el acceso a las personas con discapacidad auditiva que sepan lenguaje de señas a significados de palabras de los sitios web donde se encuentren.",
+    "short_name": "EnSeñas",
     "version": "1.0",
+    "manifest_version": 2,
+    "description": "Herramienta para facilitar el acceso a las personas con discapacidad auditiva que sepan lenguaje de señas a significados de palabras de los sitios web donde se encuentren.",
+    "homepage_url": "https://camilosalinas.me",
     "icons": {
         "48": "assets/icons/logo48.png",
         "96": "assets/icons/logo96.png",
         "512": "assets/icons/logo512.png"
     },
     "browser_action": {
-     "default_icon": "assets/icons/logo48.png"
+        "default_icon": "assets/icons/logo48.png",
+        "default_title": "EnSeñas"
     },
-    "web_accessible_resources": [
-        "ui/index.html",
-        "js/jquery/jquery.min.js",
-        "https://code.jquery.com/jquery-3.4.1.min.js"
-    ],
-    "background": {
-        "scripts": ["js/index.js"]
-      },
     "permissions": [
         "activeTab",
-        "contextMenus", 
-        "tabs",
-        "http://*/*",
-        "https://*/*"
-     ]
-    
-  }
+        "storage"
+    ],
+    "web_accessible_resources": [
+        "src/*"
+    ],
+    "background": {
+        "scripts": ["js/background.js"]
+    }
+}
