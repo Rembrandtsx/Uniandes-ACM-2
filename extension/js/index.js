@@ -1,11 +1,7 @@
 chrome.browserAction.onClicked.addListener(function (tab) {
-	// for the current tab, inject the "inject.js" file & execute it
 
-    chrome.tabs.executeScript(tab.ib, {
-		file: './js/jquery/jquery.min.js'
-	});
 
-    chrome.tabs.executeScript(tab.ib, {
-		file: './js/ui.js'
+	chrome.tabs.executeScript(tab.ib, {
+		file:"https://code.jquery.com/jquery-3.4.1.min.js"
 	});
 });

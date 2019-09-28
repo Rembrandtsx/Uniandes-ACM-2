@@ -9,9 +9,13 @@
         "512": "assets/icons/logo512.png"
     },
     "browser_action": {
-     "default_icon": "assets/icons/logo48.png",
-     "default_popup": "index.html"
+     "default_icon": "assets/icons/logo48.png"
     },
+    "web_accessible_resources": [
+        "ui/index.html",
+        "js/jquery/jquery.min.js",
+        "https://code.jquery.com/jquery-3.4.1.min.js"
+    ],
     "background": {
         "scripts": ["js/index.js"]
       },
@@ -22,4 +26,5 @@
         "http://*/*",
         "https://*/*"
      ]
+    
   }
