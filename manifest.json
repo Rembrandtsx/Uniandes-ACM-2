@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "TraduSeñas",
+    "description": "Herramienta para facilitar el acceso a las personas con discapacidad auditiva que sepan lenguaje de señas a cursos online.",
+    "version": "1.0",
+  
+    "browser_action": {
+     "default_icon": "icon.png",
+     "default_popup": "index.html"
+    },
+    "permissions": [
+     "activeTab"
+     ]
+  }
