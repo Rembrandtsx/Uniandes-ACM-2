@@ -1,0 +1,16 @@
+/*
+    NORMAS PARA ESTILOS DE ENSENAS
+
+    SIEMPRE ESCRIBIR LAS CLASES CON EL PREFIJO "ens-"
+
+
+*/
+
+
+.ens-card{
+    width: 20vw;
+    height: 35vh;
+    border-radius: 25px;
+    background-color: white;
+    z-index: 1000;
+}
