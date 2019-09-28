@@ -16,6 +16,10 @@
         "scripts": ["js/index.js"]
       },
     "permissions": [
-     "activeTab"
+        "activeTab",
+        "contextMenus", 
+        "tabs",
+        "http://*/*",
+        "https://*/*"
      ]
   }
