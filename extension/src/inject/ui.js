@@ -16,21 +16,21 @@ function keyframesToast(message){
 
 
     setTimeout(function(){
-        $("#kfToast").text(message);
-        $( "#kfToast" ).animate({
+        $("#ensToast").text(message);
+        $( "#ensToast" ).animate({
             left: "0px"
         }, 250, function() {});
     }, 100);
 
     setTimeout(function(){
-        $( "#kfToast" ).animate({
+        $( "#ensToast" ).animate({
             left: "-240px"
         }, 250, function() {});
     }, 4000);
 
 }
 
-keyframesToast("Click on an element you would like to animate.");
+keyframesToast("Haz click sobre el elemento que quieras traducir");
 
 
 
@@ -38,13 +38,13 @@ keyframesToast("Click on an element you would like to animate.");
 var targetElementSelected = false;
 $('body').children().mouseover(function(e){
     if(!targetElementSelected){
-        $(".kf-element-picker").removeClass("kf-element-picker");
-        $(e.target).addClass("kf-element-picker");
+        $(".ens-element-picker").removeClass("ens-element-picker");
+        $(e.target).addClass("ens-element-picker");
     }
   return false;
 }).mouseout(function(e) {
     if(!targetElementSelected){
-        $(this).removeClass("kf-element-picker");
+        $(this).removeClass("ens-element-picker");
     }
 });
 
@@ -53,7 +53,7 @@ $(document).click(function(event) {
 
     if(!targetElementSelected){
 
-        $(".kf-element-picker").removeClass("kf-element-picker");
+        $(".ens-element-picker").removeClass("ens-element-picker");
         event.preventDefault();
         keyframeTargetElement = event.target;
         targetElementSelected = true;
