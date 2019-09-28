@@ -28,7 +28,7 @@ var runKeyframes = function(){
     // Update data on page
     function updatePageData(){
         // Update current step number
-        $(".kf-current-step").each(function(index) {
+        $(".ens-current-step").each(function(index) {
             $(this).text(currentStep);
         });
     }
@@ -122,30 +122,30 @@ var runKeyframes = function(){
         animationProperties += $("#animationTiming").val() + ";";
 
 
-        $("#kfStyleContainer").empty();
+        $("#ensStyleContainer").empty();
 
-        $("#kfStyleContainer").append("@keyframes yourAnimation{");
+        $("#ensStyleContainer").append("@keyframes yourAnimation{");
 
         $.each(stepStyles, function (key, val) {
-            $("#kfStyleContainer").append(key + "%{" + val + "}");
+            $("#ensStyleContainer").append(key + "%{" + val + "}");
         });
-        $("#kfStyleContainer").append("}\n")
-        $("#kfStyleContainer").append(".elementToAnimate{ animation: yourAnimation " + animationProperties + "}")
-        $("#kfStyleContainer").append(".animate-timeline-tracker{ animation: trackerAnimation " + animationProperties + "}")
+        $("#ensStyleContainer").append("}\n")
+        $("#ensStyleContainer").append(".elementToAnimate{ animation: yourAnimation " + animationProperties + "}")
+        $("#ensStyleContainer").append(".animate-timeline-tracker{ animation: trackerAnimation " + animationProperties + "}")
     }
 
 
     function startAnimation(){
-        $("#kfStartAnimationButton").css('display','none');
-        $("#kfStopAnimationButton").css('display','flex');
+        $("#ensStartAnimationButton").css('display','none');
+        $("#ensStopAnimationButton").css('display','flex');
         changeStep(currentStep);
         appendStyles();
         $(keyframeTargetElement).addClass("elementToAnimate");
         $("#timelineTracker").addClass("animate-timeline-tracker");
     }
     function stopAnimation(){
-        $("#kfStopAnimationButton").css('display','none');
-        $("#kfStartAnimationButton").css('display','flex');
+        $("#ensStopAnimationButton").css('display','none');
+        $("#ensStartAnimationButton").css('display','flex');
         $(keyframeTargetElement).removeClass("elementToAnimate");
         $("#timelineTracker").removeClass("animate-timeline-tracker");
     }
@@ -233,12 +233,12 @@ var runKeyframes = function(){
         }
 
         // Clear timeline before adding again
-        $("#kfTimelineBody").empty();
-        $("#kfTimelineBody").append("<div id='timelineTracker'></div>");
-        $("#kfTimelineBody").append("<div id='timelineMarker'><b></b></div>");
+        $("#ensTimelineBody").empty();
+        $("#ensTimelineBody").append("<div id='timelineTracker'></div>");
+        $("#ensTimelineBody").append("<div id='timelineMarker'><b></b></div>");
 
         $.each(stepStyles, function (key, val) {
-            $("#kfTimelineBody").append("<div class='timeline-step' id='timelineStep" + key + "' data-step='" + key + "' style='left: " + key + "%;'><label>" + key + "</label></div>");
+            $("#ensTimelineBody").append("<div class='timeline-step' id='timelineStep" + key + "' data-step='" + key + "' style='left: " + key + "%;'><label>" + key + "</label></div>");
         });
 
         currentStep = newStepPercent;
@@ -273,9 +273,9 @@ var runKeyframes = function(){
     // Click Timeline
     // Click Timeline
     var hoverNewStepPos = 0;
-    $("#kfTimelineBody").mousemove(function(event){
-        var elementMousePos = event.pageX - $('#kfTimelineBody').offset().left + 5;
-        var elementWidth = $("#kfTimelineBody").width();
+    $("#ensTimelineBody").mousemove(function(event){
+        var elementMousePos = event.pageX - $('#ensTimelineBody').offset().left + 5;
+        var elementWidth = $("#ensTimelineBody").width();
 
         var percentagePos = (elementMousePos / elementWidth * 100);
 
@@ -288,7 +288,7 @@ var runKeyframes = function(){
 
     // Click timeline to add new step
     // NOT on timeline step
-    $("#kfTimelineBody").click(function(){
+    $("#ensTimelineBody").click(function(){
         changeStep(hoverNewStepPos);
     });
 
@@ -302,47 +302,47 @@ var runKeyframes = function(){
         changeStep(currentStep);
         appendStyles();
 
-        $("#kfOutput").empty();
+        $("#ensOutput").empty();
         // Tell people to follow me on Twitter
-        $("#kfOutput").append("/* I hope this was helpful! */\n");
-        $("#kfOutput").append("/* Follow me on Twitter 🐤 <a href='https://twitter.com/sleumasm' target='_blank'>@sleumasm</a> to see what I'm up to. */\n");
-        $("#kfOutput").append("/* Also check out my other project I'm working on - <a href='https://ceev.io' target='_blank'>Ceev.io</a>. A pretty cool online resume creator 📃. */\n\n\n");
+        $("#ensOutput").append("/* I hope this was helpful! */\n");
+        $("#ensOutput").append("/* Follow me on Twitter 🐤 <a href='https://twitter.com/sleumasm' target='_blank'>@sleumasm</a> to see what I'm up to. */\n");
+        $("#ensOutput").append("/* Also check out my other project I'm working on - <a href='https://ceev.io' target='_blank'>Ceev.io</a>. A pretty cool online resume creator 📃. */\n\n\n");
 
-        $("#kfOutput").append("/* Your animation code is below! 👇👇👇 */\n");
-        $("#kfOutput").append("___________________________________________\n\n\n");
+        $("#ensOutput").append("/* Your animation code is below! 👇👇👇 */\n");
+        $("#ensOutput").append("___________________________________________\n\n\n");
 
-        $("#kfOutput").append("@keyframes yourAnimation{\n");
+        $("#ensOutput").append("@keyframes yourAnimation{\n");
 
         $.each(stepStyles, function (key, val) {
-            $("#kfOutput").append("    " + key + "%{\n        " + val.replace(/\;/g, ';\n        '));
-            $("#kfOutput").append("}\n");
+            $("#ensOutput").append("    " + key + "%{\n        " + val.replace(/\;/g, ';\n        '));
+            $("#ensOutput").append("}\n");
         });
-        $("#kfOutput").append("}\n\n")
-        $("#kfOutput").append(".elementToAnimate{\n    animation: yourAnimation " + animationProperties + "\n}")
+        $("#ensOutput").append("}\n\n")
+        $("#ensOutput").append(".elementToAnimate{\n    animation: yourAnimation " + animationProperties + "\n}")
 
         // Actual Show Output
-        $("#kfOutput").css('display','block');
-        $("#kfCodeLightbox").css('display','block');
-        $(".kf-code-window").css('display','flex');
+        $("#ensOutput").css('display','block');
+        $("#ensCodeLightbox").css('display','block');
+        $(".ens-code-window").css('display','flex');
     })
 
     // Toggle wells on sidebar
-    $(".kf-presets-header").click(function(){
-        $(this).next('.kf-preset-well').slideToggle(100);
-        $(this).toggleClass('kf-well-active');
+    $(".ens-presets-header").click(function(){
+        $(this).next('.ens-preset-well').slideToggle(100);
+        $(this).toggleClass('ens-well-active');
     });
 
 
     // Close Lightbox and Editor
-    $("#kfCodeLightbox, #closeKfCodeWindow").click(function(){
-        $("#kfCodeLightbox").css('display','none');
-        $(".kf-code-window").css('display','none');
+    $("#ensCodeLightbox, #closeensCodeWindow").click(function(){
+        $("#ensCodeLightbox").css('display','none');
+        $(".ens-code-window").css('display','none');
         // Hide Output code
-        $("#kfOutput").css('display','none');
+        $("#ensOutput").css('display','none');
     });
 
 
-    $('.kf-po-input').keyup(function(event){
+    $('.ens-po-input').keyup(function(event){
         updateTargetStyles();
         stopAnimation();
     });
@@ -358,17 +358,17 @@ var runKeyframes = function(){
     $("#deleteCurrentStep").click(function(){
         deleteCurrentStep();
     })
-    $("#kfStartAnimationButton").click(function(){
+    $("#ensStartAnimationButton").click(function(){
         startAnimation();
     });
-    $("#kfStopAnimationButton").click(function(){
+    $("#ensStopAnimationButton").click(function(){
         stopAnimation();
     });
 
 
     // Terminate App
     $("#closeKeyframes").click(function(){
-        $(".kf-sidebar, .kf-timeline, #kfCodeLightbox, .kf-code-window, #kfToast").remove();
+        $(".ens-sidebar, .ens-timeline, #ensCodeLightbox, .ens-code-window, #ensToast").remove();
         stopAnimation();
         $("#styleContainer").empty();
         $(keyframeTargetElement).attr("style", "");
