@@ -9,7 +9,7 @@ var jsonEl= {
     carreteras: 'src/inject/videos/carreteras.mp4',
     ciencia_y_tecnologia: 'src/inject/videos/ciencia_y_tecnologia.mp4',
     colombia: 'src/inject/videos/colombia.mp4',
-    'conquista_española': 'src/inject/videos/conquista_española.mp4',
+    conquista_española: 'src/inject/videos/conquista_española.mp4',
     cultura: 'src/inject/videos/cultura.mp4',
     cuya_forma_de_gobierno_es_precidencialista: 'src/inject/videos/cuya_forma_de_gobierno_es_precidencialista.mp4',
     deportes: 'src/inject/videos/deportes.mp4',
