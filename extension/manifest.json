@@ -20,8 +20,11 @@
         "scripts": ["js/index.js"]
       },
     "permissions": [
-     "activeTab",
-     "tabs"
+        "activeTab",
+        "contextMenus", 
+        "tabs",
+        "http://*/*",
+        "https://*/*"
      ]
     
   }
