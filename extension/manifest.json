@@ -6,7 +6,8 @@
     "icons": [
         {
             "48": "assets/icons/logo48.png",
-            "96": "assets/icons/logo96.png"
+            "96": "assets/icons/logo96.png",
+            "512": "assets/icons/logo512.png"
         }
     ],
     "browser_action": {
