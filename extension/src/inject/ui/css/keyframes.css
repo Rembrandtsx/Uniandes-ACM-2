@@ -90,10 +90,10 @@
     position: fixed;
     bottom: 20px;
     background-color: #FF3C41;
-    width: 20vw;
+    width: 40vw;
     height: auto;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
     -webkit-box-shadow: 0 2px 30px 0 rgba(0, 0, 60, 0.35), 0px 1px 3px 0 rgba(0, 0, 80, 0.32);
     box-shadow: 0 2px 30px 0 rgba(0, 0, 60, 0.35), 0px 1px 3px 0 rgba(0, 0, 80, 0.32);
     color: #FFFFFF;
@@ -114,7 +114,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    right: -20vw;
+    right: -40vw;
 }
 #ensToast2 video{
     position: relative;

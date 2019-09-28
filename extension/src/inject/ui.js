@@ -87,7 +87,7 @@ function keyframesToast2(message){
 
 
     setTimeout(function(){
-        $("#ensToast").text("Traducción");
+        $("#ensToast2").text("Traducción");
         console.log(message);
         
         let hola =Object.keys(jsonEl).find(x=>{
@@ -107,17 +107,17 @@ function keyframesToast2(message){
             autoplay:true,
             muted: true
         });
-        video.appendTo($("#ensToast"));
-        $( "#ensToast" ).animate({
+        video.appendTo($("#ensToast2"));
+        $( "#ensToast2" ).animate({
             right: "0vw"
         }, 250, function() {});
     }, 100);
 
     setTimeout(function(){
-        $( "#ensToast" ).animate({
-            right: "-20vw"
+        $( "#ensToast2" ).animate({
+            right: "-40vw"
         }, 250, function() {});
-    }, 12000);
+    }, 8000);
 
 }
 
