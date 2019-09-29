@@ -90,12 +90,13 @@ function keyframesToast2(message){
         $("#ensToast2").text("Interpretación");
         console.log(message);
         
-        let hola =Object.keys(jsonEl).find(x=>{
+        let hola =Object.keys(jsonEl).filter(x=>{
             console.log(x);
             
             
-            return x.includes(message)
-        })
+            return message.includes(x)
+        })[0]
+        
         console.log(hola);
         
         var url64= chrome.extension.getURL('src/inject/videos/'+hola+'.mp4');
