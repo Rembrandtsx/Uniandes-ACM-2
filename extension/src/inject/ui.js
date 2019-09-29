@@ -87,7 +87,7 @@ function keyframesToast2(message){
 
 
     setTimeout(function(){
-        $("#ensToast2").text("Traducción");
+        $("#ensToast2").text("Interpretación");
         console.log(message);
         
         let hola =Object.keys(jsonEl).find(x=>{
@@ -149,7 +149,7 @@ $(document).click(function(event) {
         console.log("Target element selected:");
         console.log(keyframeTargetElement);
         console.log(keyframeTargetElement.textContent)
-        let message = keyframeTargetElement.textContent.toLowerCase();
+        let message = keyframeTargetElement.textContent.toLowerCase().replace(/ /g,"_");
         keyframesToast2(message);
     }else{
         return;
